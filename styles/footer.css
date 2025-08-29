@@ -44,6 +44,10 @@ input[type="submit"] {
     z-index: -1;
 }
 
+.touch img {
+    width: 100%;
+}
+
 .touch::before {
     content: "";
     position: absolute;
