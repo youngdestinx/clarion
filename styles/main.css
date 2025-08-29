@@ -36,8 +36,8 @@
 
 .hero img {
     max-width: 100%;
-    height: auto;
-    overflow: hidden;
+    object-fit: cover;
+    height: 100vh;
 }
 
 .hero h4 {

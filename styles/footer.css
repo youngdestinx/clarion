@@ -46,8 +46,8 @@ input[type="submit"] {
 
 .touch img {
     max-width: 100%;
-    height: auto;
-    overflow: hidden;
+    height: 100vh;
+    object-fit: cover;
 }
 
 .touch::before {
