@@ -46,6 +46,7 @@ input[type="submit"] {
 
 .touch img {
     width: 100%;
+    overflow: hidden;
 }
 
 .touch::before {
