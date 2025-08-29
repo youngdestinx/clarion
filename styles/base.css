@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+.info,
+#menu,
+main,
+footer {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    padding: .5rem;
+}
+
+header.scroll {
+    background-color: #ccc;
+    transition: background-color 0.3s ease;
+}
+
+header.show {
+    background-color: #000;
+}
+
+#ham::before {
+    content: "≡";
+    display: inline-block;
+    text-decoration: none;
+    font-size: 50px;   
+}
+
+#menu {
+    padding: 0 .5rem;
+    display: none;
+}
+
+#ham.show::before {
+    content: "X";
+    display: inline-block;
+    text-decoration: none;
+    font-size: 40px;   
+}   
+
+#menu.show {
+    display: block;
+}
+
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+#menu ul.show {
+    display: flex;
+    flex-direction: column;
+    height: 210px;
+    overflow-y: auto;
+}
+
+#menu :first-child li {
+    padding: .5rem 1rem;
+    border-bottom: 1px solid #000;
+}
+
+.link-children h3 ,
+.link-children li {
+    padding: .5rem 1rem;
+}
+
+#last {
+    position: relative;
+}
+
+#last::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    border-bottom: 2px solid #ccc;
+}
+
+#menu div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-bottom: 1px solid #000;
+}
+
+#menu div.show {
+    background-color: #ccc;
+}
+
+#reach {
+    display: block;
+    text-align: center;
+    background-color: #ccc;
+    margin: 1rem 0;
+    padding: .5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.info.show, main.show, footer.show {
+    display: none;
+}
+
+.info {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    background-color: #ccc;
+}
+
+.info p {
+    position: absolute;
+    white-space: nowrap;
+    animation: flow 10s linear  infinite;
+    text-align: center;
+    padding: 1rem;
+}
+
+@keyframes flow {
+    0% {
+        transform: translate(-100%);
+    }
+    100% {
+        transform: translate(100%);
+    }
+}
