@@ -9,7 +9,7 @@ header,
 #menu,
 main,
 footer {
-    max-width: 480px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
@@ -20,7 +20,8 @@ header {
     top: 0;
     z-index: 1;
     background-color: #fff;
-    padding: .5rem;
+    padding: 1rem;
+    margin-top: .2rem;
 }
 
 header.scroll {
@@ -37,11 +38,6 @@ header.show {
     display: inline-block;
     text-decoration: none;
     font-size: 50px;   
-}
-
-#menu {
-    padding: 0 .5rem;
-    display: none;
 }
 
 #ham.show::before {
