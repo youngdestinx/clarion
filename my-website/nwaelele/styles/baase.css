@@ -1,0 +1,405 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header,
+.nav,
+main,
+footer {
+    width: 400px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(225, 225, 225, 0.5);
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul {
+    list-style: none;
+    padding-bottom: 2rem;
+}
+
+#ham::before {
+    content: "≡";
+    display: inline-block;
+    text-decoration: none;
+    font-size: 40px;
+    color: hwb(0 0% 100%);
+}
+
+.nav {
+    display: none;
+}
+
+#ham.show::before {
+    content: "X";
+    display: inline-block;
+    text-decoration: none;
+    font-size: 40px;
+    color: hwb(0 0% 100%);  
+}   
+
+.nav.show {
+    display: block;
+}
+
+main.show, footer.show {
+    display: none;
+}
+
+.nav a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border-bottom: 2px solid #676464cc;
+}
+
+#way {
+    background-color: hwb(0 0% 100%);
+}
+
+#way a {
+    color: hwb(0 100% 0%);
+}
+
+body {
+    font-size: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+    padding: 1rem 0;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p {
+    color: #676464cc;
+    line-height: 1.5;
+}
+
+.hero p {
+    font-size: 20px;
+    padding-bottom: 2rem;
+}
+
+.hero img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.first {
+    background-color: #f2f2f2;
+    padding: 0 1rem;
+    overflow: hidden;
+}
+
+.first h2 {
+    padding-top: 4rem;
+    padding-bottom: .5rem;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: .5rem;
+    margin-bottom: 2rem;
+}
+
+.first p {
+    padding-bottom: 1rem;
+}
+
+.first p > img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    float: right;
+    margin: 10px 0 10px 15px;
+    shape-outside: inset(0 round 10px);
+}
+
+.second {
+    background-color: hwb(0 0% 100%);
+    padding: 0 1rem;
+    color: lch(100% 0.01 296.81);    
+}
+
+.second h2 {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: .5rem;
+}
+
+.second .icon {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.second p, .third-last p {
+    color: rgba(255, 249, 249, 0.808);
+}
+
+.scroll {
+    position: relative;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem;
+    padding-top: 4rem;
+}
+
+.item {
+    position: relative;
+    width: 100%;
+    min-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    flex: 0 0 80%;
+    border: 2px solid rgb(219, 217, 217);
+    scroll-snap-align: center;
+    padding: 2rem;
+}
+
+.second span {
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2rem;
+    height: 2rem;
+    background-color: hsla(0, 33%, 1%, 0.781);
+    color: hsl(0, 0%, 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid hsl(0, 0%, 100%);
+}
+
+.scroll h3 {
+    padding-bottom: 1rem;
+}
+
+.third {
+    background-color: #f2f2f2;
+    padding: 0 1rem;
+    
+}
+
+.third h2 {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.third p, .third h3, .third li, .third .cta {
+    padding-bottom: 2rem;
+}
+
+.third ul {
+    list-style: none;
+}
+
+.third li {
+    display: flex;
+    align-items: center;
+    color: #676464cc;
+}
+
+.third li span {
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.third .cta {
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.third .cta a {
+    background-color: hsl(0, 0%, 0%);
+    color: hwb(0 100% 0%);
+    text-decoration: none;
+    padding: .5rem 1rem;
+}
+
+.third img {
+    width: 100%;
+    object-fit: cover;
+    padding-bottom: 2rem;
+}
+
+.third-last {
+    background-color: hwb(0 0% 100%);
+    padding: 2rem;
+    color: lch(100% 0.01 296.81);  
+    overflow: hidden;      
+}
+
+.third-last h3 {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.third-last > p {
+    padding-bottom: 2rem;
+}
+
+.third-last img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: .1rem;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    padding: 1.5rem;
+    background-color: #fff;
+    color: hwb(0 0% 100%);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slide p {
+    color: #676464cc;
+    padding: 1rem;
+}
+
+.slide h4 {
+    padding: .5rem;
+}
+
+.navg {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navg button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    margin: 0 auto;
+    padding: .4rem .8rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 0 1rem;
+}
+
+footer h2 {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+p {
+    padding-bottom: 2rem;
+    color: #676464cc;
+}
+
+footer picture img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    float: right;
+    margin: 10px 0 10px 15px;
+    shape-outside: inset(0 round 10px);
+    border-radius: 50%;
+    padding: .5rem;
+}
+
+#dboy {
+    color: lab(21.25% 0 0);
+}
+
+footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    gap: 1rem;
+    background-color: hsl(0, 0%, 0%);
+    color: #fff;
+    padding: .5rem 0;
+    font-size: 20px;
+}
+
+footer .cta {
+    padding-bottom: 1rem;
+}
+
+
+
+@media only screen and (min-width: 480px) {
+    header,
+    .nav,
+    main,
+    footer {
+        width: 480px;
+        margin: 0 auto;
+    }  
+    
+    .first p > img {
+        margin: 20px 0 10px 15px;
+    }    
+}
+

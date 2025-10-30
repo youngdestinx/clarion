@@ -1,0 +1,168 @@
+@media only screen and (min-width: 1050px) {
+    header,
+    .nav,
+    main,
+    footer {
+        width: 100%;
+    } 
+    
+    #ham {
+        display: none;
+    }
+
+    .nav , main.show, footer.show {
+        display: block;
+    }
+
+    .nav ul {
+        display: flex;
+        align-items: center;
+        background-color: black;
+        color: hwb(0 100% 0%);
+        padding-bottom: 0;
+    }
+
+    .nav a {
+        color: #c2c1c1f6;
+        border-bottom: none;
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    .nav li {
+        padding: 1rem 0;
+    }
+
+    .hero {
+        padding: 2rem;
+        display: grid;
+        grid-template-areas: 
+            ". . . image . . ."
+            ". . .  image texts . ."
+            ". . . image p . ."
+            ". . . image . . .";
+        column-gap: 2rem;
+        row-gap: 0;
+    }
+
+    .hero picture {
+        grid-area: image;
+    }
+
+    .hero h1 {
+        grid-area: texts;
+        padding: 0;
+    }
+
+    .hero p {
+        grid-area: p;
+    }
+
+    .first {
+        padding: 2rem;
+        display: grid;
+        grid-template-areas: 
+            "h2 . ."
+            "icon . ."
+            ". . ."
+            "p1 p3 ."
+            "p2 p3 ."
+            ". . .";
+        column-gap: 2rem;
+        row-gap: 0;
+    }
+
+    .first h2 {
+        grid-area: h2;
+    }
+
+    .first .icon {
+        grid-area: icon;
+    }
+
+    .first p:first-of-type {
+        grid-area: p1;
+        padding-bottom: 0;
+    }
+   
+    .first p:nth-of-type(2) {
+        grid-area: p2;
+    }
+
+    .first p:nth-of-type(3) {
+        grid-area: p3;
+    }
+
+    .first p > img {
+        margin: 10px 0 0 15px;
+        padding: 1rem .5rem;
+        shape-outside: inset(0 round 10px);
+    }
+
+    .item {
+        flex: 0 0 calc(33.333% - 1rem);
+    }
+
+    .second > p {
+        text-align: center;
+    }
+
+    .third {
+        padding: 2rem;
+        display: grid;
+        grid-template-areas: 
+            "h2 h2"
+            "p1 p1"
+            "first image"
+            "second image";
+        column-gap: 2rem;
+        row-gap: 0;        
+    }
+
+    .third h2 {
+        grid-area: h2;
+    }
+
+    .third :nth-child(2) {
+        grid-area: p1;
+    }
+
+    .third .first {
+        grid-area: first;
+    }
+
+    .third .second {
+        grid-area: second;
+    }
+
+    .third img {
+        grid-area: image;
+        margin-top: 40rem;
+    }
+
+    .third-last h3 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .third-last > p {
+        text-align: center;
+    }
+
+    .slider {
+       max-width: 50%; 
+       margin: 0 auto;
+    }
+
+    footer {
+        position: relative;
+    }
+
+    footer picture img {
+        visibility: hidden;
+    }
+
+    footer a {
+        padding: 1rem 3rem;
+        width: max-content;
+    }
+}
